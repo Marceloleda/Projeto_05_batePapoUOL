@@ -29,7 +29,12 @@ section{
     height: 520px;
     background-color: #E5E5E5;
     overflow: hidden;
-    overflow-y: scroll
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+section::-webkit-scrollbar {
+  display: none;
 }
 footer{
     display: flex;
@@ -69,15 +74,30 @@ footer img{
     width: 375px;
     margin-top: 4px;
 }
-.menssagens h1,h2{
-    font-weight: bolder;
+.entrada-mensagem span {
+    font-size: 15px;
+    font-weight: 100;
 }
-.textoPúblico{
-    background-color: #FFFFFF;
+.entrada-mensagem {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: -0.5px;
+  padding-left: 10px;
 }
-.textoPrivado{
-    background-color: #F7DEDE;
+.entrada-saida {
+  background: #dcdcdc;
 }
-.textoStatus{
-    background-color: #DCDCDC;
+
+.conversa-publica {
+  background: #fff;
+}
+
+.conversa-privada {
+  background: #ffdede;
+}
+
+.horario {
+  margin-right: 5px;
+  color: #b8b8b8;
 }
